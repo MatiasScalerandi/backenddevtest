@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Shirt",
+    "price": 9.99,
+    "availability": true
+    },
+      {
+    "id": 2,
+    "name": "Dress",
+    "price": 19.99,
+    "availability": true
+    },
+      {
+    "id": 3,
+    "name": "Blazer",
+    "price": 29.99,
+    "availability": false
+    },
+        {
+    "id": 4,
+    "name": "Boots",
+    "price": 39.99,
+    "availability": true
+    },
+      {
+    "id": 5,
+    "name": null,
+    "price": null,
+    "availability": false
+    },
+      {
+    "id": 100,
+    "name": "Trousers",
+    "price": 49.99,
+    "availability": false
+    },
+      {
+    "id": 1000,
+    "name": "Coat",
+    "price": 89.99,
+    "availability": true
+    },
+      {
+    "id": 10000,
+    "name": "Leather jacket",
+    "price": 89.99,
+    "availability": true
+    } 
+]

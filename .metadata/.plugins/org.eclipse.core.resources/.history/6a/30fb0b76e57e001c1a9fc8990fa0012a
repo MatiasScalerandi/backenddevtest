@@ -1,0 +1,79 @@
+package com.challenge.backendDevTest.service;
+
+import java.text.ParseException;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.challenge.backendDevTest.dto.ProductDto;
+import com.challenge.backendDevTest.exception.ProductNotFoundException;
+import com.challenge.backendDevTest.model.Product;
+import com.challenge.backendDevTest.repository.ProductDaoRepository;
+import com.challenge.backendDevTest.repository.ProductRepository;
+import com.challenge.backendDevTest.util.ModelMapperProductUtil;
+
+@Service
+public class ProductServiceImpl implements ProductService{
+
+	@Autowired
+	private ProductRepository mockRepo;
+	
+	@Autowired
+	private ProductDaoRepository dao;
+	
+
+	@Override
+	public List<ProductDto> getAllProducts() throws ProductNotFoundException {
+		try {
+			List<ProductDto> listMock = mockRepo.loadMockJson();
+			if (listMock.isEmpty()) {
+				throw new ProductNotFoundException();	
+			}
+			
+			postDataInDB(listMock);
+			
+			return listMock;
+		} catch (Exception e) {
+			throw new ProductNotFoundException();
+		}
+	}
+
+	private void postDataInDB(List<ProductDto> listMock) throws ParseException {
+		for (ProductDto productDto : listMock) {
+			Product productDao = ModelMapperProductUtil.convertToEntity(productDto);
+			List<Product> db = dao.findAll();
+			
+			boolean noExist = false;
+			noExist = db.size() < listMock.size() ? true : false;
+		if (noExist) {
+			dao.save(productDao);
+		}
+			
+		}
+	}
+
+	@Override
+	public List<Product> getDBProducts() {
+		return dao.findAll();
+	}
+
+	@Override
+	public List<ProductDto> getProductsByNameAndAvailability(String name, boolean availability) {
+		try {
+			List<ProductDto> list = getAllProducts().stream()
+					.filter(l -> l.getName().equalsIgnoreCase(name))
+					.filter(a -> a.isAvailability() == availability)
+					.collect(Collectors.toList());
+		} catch (ProductNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+	
+}

@@ -1,0 +1,23 @@
+package com.challenge.backendDevTest.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@EnableSwagger2
+public class SwaggerConfig {
+
+	@Bean
+	public Docket getDocket() {
+		return new Docket(DocumentationType.SWAGGER_2).apiInfo(getApiInfo()).select()
+				.apis(RequestHandlerSelectors.basePackage("com.springrest.users.controllers"))
+				.paths(PathSelectors.any()).build().useDefaultResponseMessages(false); // quiero exponer solo los de ese
+																						// package y los mensajes de
+																						// error no documentados no
+	}
+
+	private ApiInfo getApiInfo() {// definimos la info
+		return new ApiInfoBuilder().title("Documentacion Swagger por Matias").version("1.0").license("Apache 2.0")
+				.contact(new Contact("Matias Scalerandi", "www.matute.com", "@matias.bayequipo@gmail.com")).build();
+	}
+}

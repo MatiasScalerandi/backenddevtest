@@ -1,0 +1,80 @@
+package com.challenge.backendDevTest.service;
+
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.challenge.backendDevTest.dto.ProductDto;
+import com.challenge.backendDevTest.exception.ProductNotFoundException;
+import com.challenge.backendDevTest.model.Product;
+import com.challenge.backendDevTest.repository.ProductDaoRepository;
+import com.challenge.backendDevTest.repository.ProductRepository;
+import com.challenge.backendDevTest.util.ModelMapperProductUtil;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+
+	@Autowired
+	private ProductRepository mockRepo;
+
+	@Autowired
+	private ProductDaoRepository dao;
+
+	@Override
+	public List<ProductDto> getAllProducts() throws ProductNotFoundException {
+		try {
+			List<ProductDto> listMock = mockRepo.loadMockJson();
+			if (listMock.isEmpty()) {
+				throw new ProductNotFoundException();
+			}
+
+			postDataInDB(listMock);
+
+			return listMock;
+		} catch (Exception e) {
+			throw new ProductNotFoundException();
+		}
+	}
+
+	private void postDataInDB(List<ProductDto> listMock) throws ParseException {
+		for (ProductDto productDto : listMock) {
+			Product productDao = ModelMapperProductUtil.convertToEntity(productDto);
+			List<Product> db = dao.findAll();
+
+			boolean noExist = false;
+			noExist = db.size() < listMock.size() ? true : false;
+			if (noExist) {
+				dao.save(productDao);
+			}
+
+		}
+	}
+
+
+	@Override
+	public List<ProductDto> getProductsByNameAndAvailability(String name) throws ParseException {
+
+
+		try {
+			List<ProductDto> listMock = mockRepo.loadMockJson();
+			if (listMock.isEmpty()) {
+				throw new ProductNotFoundException();
+			}
+			
+			postDataInDB(listMock);
+			
+			return listMock.stream().filter(l -> l.getName().equalsIgnoreCase(name) && l.getName() != null)
+					.filter(a -> a.isAvailability() == true).collect(Collectors.toList());;
+
+		} catch (ProductNotFoundException e) {
+			e.printStackTrace();
+		}
+	
+
+	}
+
+}

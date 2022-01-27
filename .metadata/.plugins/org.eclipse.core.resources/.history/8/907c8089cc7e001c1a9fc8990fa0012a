@@ -1,0 +1,8 @@
+INSERT INTO PRODUCT (name, price, availability) VALUES ('Shirt', 9.99, true)
+INSERT INTO PRODUCT (name, price, availability) VALUES ('Shirt', 9.99, true)
+INSERT INTO PRODUCT (name, price, availability) VALUES ('Shirt', 9.99, true)
+INSERT INTO PRODUCT (name, price, availability) VALUES ('Shirt', 9.99, true)
+INSERT INTO PRODUCT (name, price, availability) VALUES ('Shirt', 9.99, true)
+INSERT INTO PRODUCT (name, price, availability) VALUES ('Shirt', 9.99, true)
+INSERT INTO PRODUCT (name, price, availability) VALUES ('Shirt', 9.99, true)
+INSERT INTO PRODUCT (name, price, availability) VALUES ('Shirt', 9.99, true)

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestService" project="backendDevTest" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="com.challenge.backendDevTest.service.TestService" time="1.949" displayname="TestService" uniqueid="[engine:junit-jupiter]/[class:com.challenge.backendDevTest.service.TestService]">
+    <testcase name="testGetAllProductsProductNotFound" classname="com.challenge.backendDevTest.service.TestService" time="1.291" displayname="testGetAllProductsProductNotFound()" uniqueid="[engine:junit-jupiter]/[class:com.challenge.backendDevTest.service.TestService]/[method:testGetAllProductsProductNotFound()]"/>
+    <testcase name="OrderByPriceListEmpty" classname="com.challenge.backendDevTest.service.TestService" time="0.011" displayname="OrderByPriceListEmpty()" uniqueid="[engine:junit-jupiter]/[class:com.challenge.backendDevTest.service.TestService]/[method:OrderByPriceListEmpty()]"/>
+    <testcase name="testGetAllProductsOk" classname="com.challenge.backendDevTest.service.TestService" time="0.056" displayname="testGetAllProductsOk()" uniqueid="[engine:junit-jupiter]/[class:com.challenge.backendDevTest.service.TestService]/[method:testGetAllProductsOk()]"/>
+    <testcase name="OrderByPriceOk" classname="com.challenge.backendDevTest.service.TestService" time="0.016" displayname="OrderByPriceOk()" uniqueid="[engine:junit-jupiter]/[class:com.challenge.backendDevTest.service.TestService]/[method:OrderByPriceOk()]"/>
+    <testcase name="LoadMockTest" classname="com.challenge.backendDevTest.service.TestService" time="0.575" displayname="LoadMockTest()" uniqueid="[engine:junit-jupiter]/[class:com.challenge.backendDevTest.service.TestService]/[method:LoadMockTest()]"/>
+  </testsuite>
+</testrun>

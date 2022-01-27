@@ -1,0 +1,21 @@
+package com.challenge.backendDevTest.dto;
+
+public class MessageDto {
+
+	private String mensaje;
+	 
+	public MessageDto() {
+	}
+	
+	public MessageDto(String mensaje) {
+		this.mensaje = mensaje;
+	}
+
+	public String getMensaje() {
+		return mensaje;
+	}
+
+	public void setMensaje(String mensaje) {
+		this.mensaje = mensaje;
+	}
+}

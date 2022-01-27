@@ -1,0 +1,14 @@
+package com.challenge.backendDevTest.repository;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.challenge.backendDevTest.dto.ProductDto;
+import com.challenge.backendDevTest.model.Product;
+
+public interface ProductDaoRepository extends JpaRepository<Product, Long> {
+S
+}

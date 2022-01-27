@@ -1,0 +1,29 @@
+package com.challenge.backendDevTest.service;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.challenge.backendDevTest.dto.ProductDto;
+import com.challenge.backendDevTest.repository.ProductDaoRepository;
+import com.challenge.backendDevTest.repository.ProductRepository;
+
+public class TestService {
+	
+	@Autowired
+    private ProductDaoRepository productDaoRepository;
+	
+	@Autowired
+    private ProductRepository productRepoMock;
+
+	@Test
+	public void GivenGetAllProductShouldReturnListOfAllProducts(){
+		List<ProductDto> product = new ArrayList<>();
+	     List<ProductDto> productList = productRepoMock.loadMockJson();
+	     assertEquals(product, productList);
+	}
+}

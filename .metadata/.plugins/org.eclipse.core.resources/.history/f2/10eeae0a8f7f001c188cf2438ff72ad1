@@ -1,0 +1,98 @@
+package com.challenge.backendDevTest.service;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.aspectj.lang.annotation.Before;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.data.domain.Sort;
+
+import com.challenge.backendDevTest.dto.ProductDto;
+import com.challenge.backendDevTest.exception.ProductNotFoundException;
+import com.challenge.backendDevTest.model.Product;
+import com.challenge.backendDevTest.repository.ProductDaoRepository;
+import com.challenge.backendDevTest.repository.ProductRepository;
+import com.challenge.backendDevTest.repository.ProductRepositoryImpl;
+
+public class TestService {
+	
+	@Mock
+    private ProductDaoRepository productDaoRepository;
+	
+	@Mock
+    private ProductRepository productRepoMock;
+	
+	@Autowired
+	@InjectMocks
+	private ProductServiceImpl service;
+	List<Product> mockList = new ArrayList<>();
+	Product p = new Product();
+	
+	@InjectMocks
+	private ProductRepositoryImpl repo;
+	
+	@BeforeEach
+	public void init() {
+		MockitoAnnotations.initMocks(this);
+	
+		p.setId(1L);
+		p.setName("shirt");
+		p.setAvailability(true);
+		p.setPrice(10.00);
+	}
+	
+
+	@Test
+	public void OrderByPriceListEmpty(){
+		List<Product> lp = new ArrayList<>();
+		
+		Mockito.when(productDaoRepository.findAll()).thenReturn(lp);
+		service.getProductsByOrderByPrice();
+
+	}
+	
+	@Test
+	public void LoadMockTest(){
+		List<ProductDto> lp = new ArrayList<>();
+		
+		Mockito.when(productRepoMock.loadMockJson()).thenReturn(lp);
+		repo.loadMockJson();
+
+	}
+	
+	@Test
+	public void OrderByPriceOk(){
+		List<Product> lp = new ArrayList<>();
+		
+		Mockito.when(productDaoRepository.findAll(Sort.by(Sort.Direction.DESC, "price"))).thenReturn(Arrays.asList(p));
+		service.getProductsByOrderByPrice();
+
+	}
+	
+	@Test
+	public void FilterByNameAndAvailability() throws ParseException, ProductNotFoundException{
+		List<ProductDto> lp = new ArrayList<>();
+		
+		
+		Mockito.when(productRepoMock.loadMockJson()).thenReturn(lp);
+		Mockito.when(productDaoRepository.findAll()).thenReturn(Arrays.asList(p));
+		Mockito.when(productDaoRepository.save(p)).thenReturn(p);
+		
+		service.getProductsByNameAndAvailability(p.getName());
+
+	}
+}

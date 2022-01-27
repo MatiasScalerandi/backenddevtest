@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestService" project="backendDevTest" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.challenge.backendDevTest.service.TestService" time="1.933" displayname="TestService" uniqueid="[engine:junit-jupiter]/[class:com.challenge.backendDevTest.service.TestService]">
+    <testcase name="OrderByPriceListEmpty" classname="com.challenge.backendDevTest.service.TestService" time="1.295" displayname="OrderByPriceListEmpty()" uniqueid="[engine:junit-jupiter]/[class:com.challenge.backendDevTest.service.TestService]/[method:OrderByPriceListEmpty()]"/>
+    <testcase name="OrderByPriceOk" classname="com.challenge.backendDevTest.service.TestService" time="0.072" displayname="OrderByPriceOk()" uniqueid="[engine:junit-jupiter]/[class:com.challenge.backendDevTest.service.TestService]/[method:OrderByPriceOk()]"/>
+    <testcase name="PruebaRpeo" classname="com.challenge.backendDevTest.service.TestService" time="0.566" displayname="PruebaRpeo()" uniqueid="[engine:junit-jupiter]/[class:com.challenge.backendDevTest.service.TestService]/[method:PruebaRpeo()]"/>
+  </testsuite>
+</testrun>

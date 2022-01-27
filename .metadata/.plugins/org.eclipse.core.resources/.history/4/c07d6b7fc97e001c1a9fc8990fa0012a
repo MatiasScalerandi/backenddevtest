@@ -1,0 +1,9 @@
+package com.challenge.backendDevTest.service;
+
+import java.util.List;
+
+import com.challenge.backendDevTest.model.Product;
+
+public interface ProductDaoService {
+	
+}

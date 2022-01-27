@@ -1,0 +1,5 @@
+INSERT INTO USUARIO (nombre, apellido, email) VALUES ('juan', 'larrocca', 'juan@gamil.com')
+INSERT INTO USUARIO (nombre, apellido, email) VALUES ('ASDASDF', 'larrocca', 'sadfadf@gamil.com')
+INSERT INTO USUARIO (nombre, apellido, email) VALUES ('jordi', 'larrocca', 'juaaaaan@gamil.com')
+INSERT INTO USUARIO (nombre, apellido, email) VALUES ('tomu', 'larrocca', 'jusaddsaan@gamil.com')
+INSERT INTO USUARIO (nombre, apellido, email) VALUES ('kovin', 'larrocca', 'juaasdsad@gamil.com')

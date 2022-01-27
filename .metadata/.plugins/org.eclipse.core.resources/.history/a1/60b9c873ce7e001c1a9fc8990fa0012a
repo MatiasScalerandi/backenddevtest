@@ -1,0 +1,11 @@
+package com.challenge.backendDevTest.service;
+
+import java.util.List;
+
+import com.challenge.backendDevTest.dto.ProductDto;
+import com.challenge.backendDevTest.model.Product;
+
+public interface ProductService {
+	List<ProductDto> getAllProducts();
+	List<Product> getDBProducts();
+}

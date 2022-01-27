@@ -1,0 +1,7 @@
+package com.challenge.backendDevTest.constant;
+
+public class ErrorConstants {
+	public final static String ERROR_HANDLER = "Error!!!";
+	public final static String LIST_JSON_EMPTY = "The Json is Empty";
+
+}

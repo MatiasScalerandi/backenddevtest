@@ -1,0 +1,6 @@
+package com.challenge.backendDevTest.exception;
+
+public class ProductNotFoundException extends Exception{
+	
+
+}

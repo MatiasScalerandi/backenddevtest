@@ -1,0 +1,29 @@
+package com.challenge.backendDevTest.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.challenge.backendDevTest.dto.ProductDto;
+import com.challenge.backendDevTest.model.Product;
+import com.challenge.backendDevTest.service.ProductService;
+
+@RestController
+public class ProductMockController {
+	
+	@Autowired
+	private ProductService service;
+	
+	@GetMapping("getAll")
+	public List<ProductDto> getProducts(){
+		return service.getAllProducts();
+	}
+	
+	@GetMapping("getAllDao")
+	public List<Product> getProductsDB(){
+		return service.getDBProducts();
+	}
+
+}

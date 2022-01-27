@@ -1,0 +1,36 @@
+package com.challenge.backendDevTest.controller;
+
+import java.util.List;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.Nullable;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.challenge.backendDevTest.dto.ProductDto;
+import com.challenge.backendDevTest.exception.ProductNotFoundException;
+import com.challenge.backendDevTest.model.Product;
+import com.challenge.backendDevTest.service.ProductService;
+import com.challenge.backendDevTest.util.ModelMapperProductUtil;
+
+@RestController
+@RequestMapping("api")
+public class ProductMockController {
+	
+	@Autowired
+	private ProductService service;
+	
+	@GetMapping("/getAllProducts")
+	public List<ProductDto> getProducts() throws ProductNotFoundException{
+		return service.getAllProducts();
+	}
+	
+	@GetMapping("filter")
+	public List<Product> getProductsByNameAndAvilability(@Nullable @RequestParam String name){
+		return service.getProductsByNameAndAvailability(name)
+	}
+
+}
