@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestController.testGetAllProducts" project="backendDevTest" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="com.challenge.backendDevTest.controller.TestController" time="0.215" displayname="TestController" uniqueid="[engine:junit-jupiter]/[class:com.challenge.backendDevTest.controller.TestController]">
-    <testcase name="testGetAllProducts" classname="com.challenge.backendDevTest.controller.TestController" time="0.215" displayname="testGetAllProducts()" uniqueid="[engine:junit-jupiter]/[class:com.challenge.backendDevTest.controller.TestController]/[method:testGetAllProducts()]"/>
-  </testsuite>
-</testrun>

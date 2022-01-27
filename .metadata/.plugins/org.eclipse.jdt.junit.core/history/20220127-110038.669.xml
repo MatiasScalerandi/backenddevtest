@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestController" project="backendDevTest" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="com.challenge.backendDevTest.controller.TestController" time="0.328" displayname="TestController" uniqueid="[engine:junit-jupiter]/[class:com.challenge.backendDevTest.controller.TestController]">
-    <testcase name="testOrderByPriceDesc" classname="com.challenge.backendDevTest.controller.TestController" time="0.282" displayname="testOrderByPriceDesc()" uniqueid="[engine:junit-jupiter]/[class:com.challenge.backendDevTest.controller.TestController]/[method:testOrderByPriceDesc()]"/>
-    <testcase name="testProductsByNameAndAvilability" classname="com.challenge.backendDevTest.controller.TestController" time="0.028" displayname="testProductsByNameAndAvilability()" uniqueid="[engine:junit-jupiter]/[class:com.challenge.backendDevTest.controller.TestController]/[method:testProductsByNameAndAvilability()]"/>
-    <testcase name="testGetAllProducts" classname="com.challenge.backendDevTest.controller.TestController" time="0.018" displayname="testGetAllProducts()" uniqueid="[engine:junit-jupiter]/[class:com.challenge.backendDevTest.controller.TestController]/[method:testGetAllProducts()]"/>
-  </testsuite>
-</testrun>

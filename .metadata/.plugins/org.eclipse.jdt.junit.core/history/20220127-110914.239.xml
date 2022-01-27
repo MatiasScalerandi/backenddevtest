@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRepo.testMocks" project="backendDevTest" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="com.challenge.backendDevTest.repository.TestRepo" time="0.045" displayname="TestRepo" uniqueid="[engine:junit-jupiter]/[class:com.challenge.backendDevTest.repository.TestRepo]">
-    <testcase name="testMocks" classname="com.challenge.backendDevTest.repository.TestRepo" time="0.045" displayname="testMocks()" uniqueid="[engine:junit-jupiter]/[class:com.challenge.backendDevTest.repository.TestRepo]/[method:testMocks()]"/>
-  </testsuite>
-</testrun>

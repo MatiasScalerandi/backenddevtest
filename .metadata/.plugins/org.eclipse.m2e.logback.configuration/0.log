@@ -3225,3 +3225,8 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Unrecognise
 2022-01-27 15:52:49,399 [Worker-226: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2022-01-27 15:52:49,457 [Worker-226: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
 2022-01-27 15:52:49,462 [Worker-226: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-27 15:52:49,462 [Worker-226: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-01-27 15:52:49,462 [Worker-226: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Usuario\Desktop\pruebas-springboot\backendDevTest\backendDevTest\src\test\resources
+2022-01-27 16:09:31,629 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@5525000d{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
+2022-01-27 16:09:31,633 [Stop Help Server] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
+2022-01-27 16:09:31,732 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@5b28a14e{/help,null,UNAVAILABLE}

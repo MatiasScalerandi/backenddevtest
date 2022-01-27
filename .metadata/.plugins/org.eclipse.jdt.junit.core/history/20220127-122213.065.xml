@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestService.OrderByPriceOk" project="backendDevTest" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="com.challenge.backendDevTest.service.TestService" time="1.315" displayname="TestService" uniqueid="[engine:junit-jupiter]/[class:com.challenge.backendDevTest.service.TestService]">
-    <testcase name="OrderByPriceOk" classname="com.challenge.backendDevTest.service.TestService" time="1.315" displayname="OrderByPriceOk()" uniqueid="[engine:junit-jupiter]/[class:com.challenge.backendDevTest.service.TestService]/[method:OrderByPriceOk()]"/>
-  </testsuite>
-</testrun>
